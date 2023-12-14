@@ -10,6 +10,7 @@ import AllGlasses from './pages/AllGlasses';
 import FilterByGlasses from './pages/FilterByGlasses';
 import FilterByIngredient from './pages/FilterByIngredient';
 import SearchPage from './pages/SearchPage';
+import Error404 from './pages/Error404';
 
 function App() {
   return(<BrowserRouter> 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/FilterByGlasses/:adn" element={<FilterByGlasses />} />
         <Route path="/FilterByIngredient/:identity" element={<FilterByIngredient />} />
         <Route path="/SearchResults/:research" element={<SearchPage />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter> )
 }
